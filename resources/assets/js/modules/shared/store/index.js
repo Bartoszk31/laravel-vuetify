@@ -1,4 +1,6 @@
 export default {
+    namespaced: true,
+
     state: {
         loading: false
     },
@@ -14,10 +16,10 @@ export default {
     },
     
     actions: {
-        loadingStart ({ commit }) {
+        startLoading ({ commit }) {
             commit('setLoading', true)
         },
-        loadingStop ({ commit }) {
+        stopLoading ({ commit }) {
             commit('setLoading', false)
         }
     }

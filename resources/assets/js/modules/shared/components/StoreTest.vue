@@ -28,15 +28,15 @@
         },
         computed: {
             isLoading() {
-                return this.$store.getters.isLoading;
+                return this.$store.getters['shared/isLoading'];
             }
         },
         methods: {
             startLoading() {
-                this.$store.dispatch('loadingStart');
+                this.$store.dispatch('shared/startLoading');
             },
             stopLoading() {
-                this.$store.dispatch('loadingStop');
+                this.$store.dispatch('shared/stopLoading');
             }
         }
     }
